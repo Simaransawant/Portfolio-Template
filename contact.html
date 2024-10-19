@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <!-- AOS CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- AOS JavaScript -->
@@ -73,8 +75,8 @@
       </div>
     </section>
 
-    <div class="container mt-5 mb-5">
-        <div class="container my-5">
+    <div  class="container mt-5 mb-5">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="container my-5">
             <div class="row gy-4">
               <div class="col-md-6 mb-3">
                 <div class="d-flex align-items-center">
@@ -137,27 +139,29 @@
           </div>
           
           
-
-        <form class="row mt-5">
-          <div class="col-md-6 mb-3">
-            <input type="text" class="form-control bg-black text-white border-dark" id="name" placeholder="Your Name">
-          </div>
-          <div class="col-md-6 mb-3">
-            <input type="email" class="form-control bg-black text-white border-dark" id="email" placeholder="Your Email">
-          </div>
-          <div class="col-md-12 mb-3">
-            <input type="text" class="form-control bg-black text-white border-dark" id="subject" placeholder="Subject">
-          </div>
-          <div class="col-md-12 mb-3">
-            <textarea class="form-control bg-black text-white border-dark" id="message" rows="4" placeholder="Your Message"></textarea>
-          </div>
-      
-          <div class="col-md-12 text-center">
-            <button type="submit" class="btn send-btn  text-black rounded-pill">Send Message</button>
-          </div>
-        </form>
-      </div>
-      
+          <div data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="300">
+            <form id="contactForm" class="row mt-5" action="https://api.web3forms.com/submit" method="POST">
+                <div class="col-md-6 mb-3">
+                    <input type="hidden" name="access_key" value="7a70e1e9-b4f6-4259-89fb-c10820261ed7">
+                    <input type="text" class="form-control bg-black text-white border-dark" id="name" name="fullName" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="email" class="form-control bg-black text-white border-dark" id="email" name="Email" placeholder="Your Email" required>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <input type="text" class="form-control bg-black text-white border-dark" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <textarea class="form-control bg-black text-white border-dark" id="message" rows="4" name="message" placeholder="Your Message" required></textarea>
+                </div>
+        
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn send-btn text-black rounded-pill">Send Message</button>
+                </div>
+                <div id="formResponse" class="mt-3 text-center"></div>
+            </form>
+        </div>
+        
       
 
     
@@ -199,6 +203,22 @@
   </button>
 </main>
 
+<!-- Modal for form submission response -->
+<div class="modal fade" id="formResponseModal" tabindex="-1" aria-labelledby="formResponseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="formResponseModalLabel">Message Status</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center" id="modalMessage">
+              Your message has been sent successfully!
+          </div>
+      </div>
+  </div>
+</div>
+
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -228,6 +248,43 @@ function scrollToTop() {
     behavior: 'smooth'
   });
 }
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(this);
+
+    // Use fetch to send the form data
+    fetch(this.action, {
+        method: this.method,
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Show the modal with success message
+        document.getElementById('modalMessage').innerText = 'Your message has been sent successfully!';
+        const modal = new bootstrap.Modal(document.getElementById('formResponseModal'));
+        modal.show();
+
+        // Automatically close the modal after 3 seconds
+        setTimeout(() => {
+            modal.hide();
+        }, 3000);
+
+        this.reset(); // Optionally reset the form
+    })
+    .catch(error => {
+        // Show the modal with error message
+        document.getElementById('modalMessage').innerText = 'There was a problem sending your message.';
+        const modal = new bootstrap.Modal(document.getElementById('formResponseModal'));
+        modal.show();
+
+        // Automatically close the modal after 3 seconds
+        setTimeout(() => {
+            modal.hide();
+        }, 5000);
+    });
+});
 
   </script>
   

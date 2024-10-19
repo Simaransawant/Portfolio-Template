@@ -60,7 +60,20 @@ body {
     color: white;
     border-color:rgb(4, 88, 4);
   }
- 
+  .modal-content {
+    background-color: black; /* Ensure modal background is black */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Add box shadow */
+}
+
+#modalMessage {
+    color: green; /* Set text color to green */
+}
+
+/* Optional: If you want the header text to be green as well */
+.modal-header h5 {
+    color: green; /* Set header text color to green */
+}
+
 /* Form elements */
 .form-control {
     background-color: #000000 !important;
@@ -77,6 +90,14 @@ body {
     box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Optional: green glow on focus */
     outline: none; /* Remove the default blue outline */
 }
+
+#formResponse {
+  color: #4CAF50; /* Green color for response message */
+  font-weight: bold;
+}
+
+
+
 
 /* Submit button styling */
 .send-btn {
