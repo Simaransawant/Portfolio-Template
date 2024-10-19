@@ -1,0 +1,112 @@
+/* Set the background image for the whole body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .main {
+    background-color: black;
+    color: white; /* Text color for readability */
+  }
+  
+  .nav-link {
+    padding: 0 10px; /* Optional: Adjust padding for links */
+  }
+  
+  
+  /* Navbar hover effect */
+  .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expand underline on hover */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color: green; /* Change text color on hover */
+  }
+  .nav-links {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  .social_icon .btn {
+    background-color:rgb(43, 173, 43);
+    color: white;
+  }
+  .social_icon .btn:hover {
+    background-color: rgb(4, 88, 4);
+    color: white;
+    border-color:rgb(4, 88, 4);
+  }
+
+  .experience-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    position: relative;
+    padding: 20px 0;
+    border-left: 2px solid green; /* Vertical line */
+    margin-left: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.experience-dot {
+    position: absolute;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: green; /* Dot color */
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.experience-content {
+    padding-left: 20px;
+}
+
+.experience-content h3 {
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
+    color: #e0e0e0; /* Title color */
+}
+
+.experience-date {
+    display: block;
+    font-size: 1em;
+    color: #b0b0b0; /* Date color */
+    margin-bottom: 10px;
+}
+
+.experience-content p {
+    margin: 5px 0;
+    font-size: 1em;
+    
+}
+.experience-content p {
+  margin: 10px 0; /* Adjusts vertical spacing between paragraphs */
+  line-height: 1.6; /* Increases line height for better readability */
+}

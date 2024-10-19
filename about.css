@@ -1,0 +1,97 @@
+/* Set the background image for the whole body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .main {
+    background-color: black;
+    color: white; /* Text color for readability */
+  }
+  
+  .nav-link {
+    padding: 0 10px; /* Optional: Adjust padding for links */
+  }
+  
+  
+  /* Navbar hover effect */
+  .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expand underline on hover */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color: green; /* Change text color on hover */
+  }
+  .social_icon .btn {
+    background-color:rgb(43, 173, 43);;
+    color: white;
+  }
+  .social_icon .btn:hover {
+    background-color: rgb(4, 88, 4);
+    color: white;
+    border-color:rgb(4, 88, 4);
+  }
+ 
+  .nav-links {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  .progress {
+    height: 10px; /* Adjust the height of the progress bars */
+  }
+  
+  .progress-bar {
+    transition: width 1s ease; /* Animation for the progress bar */
+  }
+  
+  .skill-percentage {
+    font-weight: bold; /* Make the percentage text bold */
+  }
+  
+  .text-section {
+    position: relative;
+    /* margin-bottom: 20px; */
+}
+
+.text-title {
+    display: inline-block;
+    /* font-size: 16px; */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-right: 10px; /* Space between text and line */
+}
+
+.text-title::after {
+    content: "";
+    display: inline-block;
+    width: 100px; /* Line length */
+    height: 1px; /* Line thickness */
+    background-color:green; /* Green color for the line */
+    vertical-align: middle;
+    margin-left: 10px; /* Adjust the space between text and line */
+}

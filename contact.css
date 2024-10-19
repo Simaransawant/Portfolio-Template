@@ -1,0 +1,146 @@
+/* Set the background image for the whole body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .main {
+    background-color: black;
+    color: white; /* Text color for readability */
+  }
+  
+  .nav-link {
+    padding: 0 10px; /* Optional: Adjust padding for links */
+  }
+  
+  
+  /* Navbar hover effect */
+  .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expand underline on hover */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color: green; /* Change text color on hover */
+  }
+  .nav-links {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .socialIcon .btn {
+    background-color:rgb(43, 173, 43);
+    color: white;
+  }
+  .socialIcon .btn:hover {
+    background-color: rgb(4, 88, 4);
+    color: white;
+    border-color:rgb(4, 88, 4);
+  }
+ 
+/* Form elements */
+.form-control {
+    background-color: #000000 !important;
+    color: white !important;
+    
+    border-radius: 4px !important;
+}
+/* Hover effect for form controls */
+
+
+/* Focus effect for form controls (when clicking to type) */
+.form-control:focus {
+    border-color: #28a745 !important; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Optional: green glow on focus */
+    outline: none; /* Remove the default blue outline */
+}
+
+/* Submit button styling */
+.send-btn {
+    background-color: #28a745;
+    width: 170px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #026317 !important;
+    color: white;
+}
+
+/* Font boldness */
+.fw-bold {
+    font-weight: bold;
+}
+
+/* General text styles */
+p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* Icon styling */
+.icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.social_icons i {
+    font-size: 1.8rem;
+    color: #333;
+    margin-left: 6px;
+    text-decoration: none;
+}
+.icon-link {
+    text-decoration: none;  /* Removes underline */
+    color: inherit;         /* Inherits the current color, preventing blue */
+  }
+.social_icons i:hover {
+    color: #28a745;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.ms-4 {
+    margin-left: 1.5rem;
+}
+
+.icon-container {
+    font-size: 1.6rem;
+    display: flex;               /* Use flexbox */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    height: 60px;                /* Set a height for the container (adjust as needed) */
+    width: 60px;                 /* Set a width for the container (adjust as needed) */
+    background-color: #28a745;    /* Optional: background color */
+    border-radius: 50px;           /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: shadow */
+}

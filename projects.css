@@ -1,0 +1,102 @@
+/* Set the background image for the whole body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .main {
+    background-color: black;
+    color: white; /* Text color for readability */
+  }
+  
+  .nav-link {
+    padding: 0 10px; /* Optional: Adjust padding for links */
+  }
+  
+  
+  /* Navbar hover effect */
+  .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expand underline on hover */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color: green; /* Change text color on hover */
+  }
+  .nav-links {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  .social_icon .btn {
+    background-color:rgb(43, 173, 43);;
+    color: white;
+  }
+  .social_icon .btn:hover {
+    background-color: rgb(4, 88, 4);
+    color: white;
+    border-color:rgb(4, 88, 4);
+  }
+  .project-card {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    text-decoration: none; /* Remove underline */
+    background-color: #24282b; /* Dark background */
+    color: white; /* White text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.project-card:hover {
+    background-color: #28a745; /* Green background on hover */
+    color: black; /* Black text on hover */
+}
+
+.project-icon {
+    font-size: 2rem; /* Icon size */
+    width: 50px; /* Width for the icon */
+    color: #000;
+    height: 50px; /* Keep height equal to width for a square */
+    background-color: green; /* Initial background color for the icon */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    margin: 0 auto 15px; /* Center the icon in the card */
+    border-radius: 8px; /* Rounded corners for the icon */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow to icon */
+    transition: background-color 0.3s; /* Smooth transition for icon */
+}
+
+.project-card:hover .project-icon {
+    background-color: #218838; /* Darker green for icon on card hover */
+}
+
+/* This will ensure the icon turns to black when card is hovered */
+.project-card:hover .project-icon i {
+    color: green; /* Change icon color on hover */
+}
+
+.project-card:hover .project-icon {
+    background-color: #000; /* Change icon background color on hover */
+}
+
