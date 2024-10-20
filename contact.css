@@ -159,8 +159,8 @@ p {
     display: flex;               /* Use flexbox */
     justify-content: center;      /* Center horizontally */
     align-items: center;          /* Center vertically */
-    height: 60px;                /* Set a height for the container (adjust as needed) */
-    width: 60px;                 /* Set a width for the container (adjust as needed) */
+    height: 50px;                /* Set a height for the container (adjust as needed) */
+    width: 50px;                 /* Set a width for the container (adjust as needed) */
     background-color: #28a745;    /* Optional: background color */
     border-radius: 50px;           /* Optional: rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: shadow */
