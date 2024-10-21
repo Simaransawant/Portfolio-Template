@@ -110,3 +110,10 @@ body {
   margin: 10px 0; /* Adjusts vertical spacing between paragraphs */
   line-height: 1.6; /* Increases line height for better readability */
 }
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+  color:rgb(43, 173, 43);
+}
+.navbar-dark {
+  background-color: black;
+  }

@@ -131,3 +131,13 @@ body {
   color: white;
   border-color:rgb(4, 88, 4);
 }
+
+/* .nav-link.active{
+  color:rgb(43, 173, 43);
+} */
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+  color:rgb(43, 173, 43);
+}
+.navbar-dark {
+background-color: black;
+}

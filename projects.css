@@ -100,3 +100,11 @@ body {
     background-color: #000; /* Change icon background color on hover */
 }
 
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+  color:rgb(43, 173, 43);
+}
+.navbar-dark {
+  background-color: black;
+  }
+

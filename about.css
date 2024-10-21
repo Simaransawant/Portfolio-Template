@@ -45,7 +45,7 @@ body {
     color: green; /* Change text color on hover */
   }
   .social_icon .btn {
-    background-color:rgb(43, 173, 43);;
+    background-color:rgb(43, 173, 43);
     color: white;
   }
   .social_icon .btn:hover {
@@ -95,3 +95,10 @@ body {
     vertical-align: middle;
     margin-left: 10px; /* Adjust the space between text and line */
 }
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+  color:rgb(43, 173, 43);
+}
+.navbar-dark {
+  background-color: black;
+  }
